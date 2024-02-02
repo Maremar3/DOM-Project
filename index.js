@@ -1,6 +1,16 @@
 //import "./styles.css";
-const mainEL = document.getElementsByName("main")[0];
- console.log(mainEL);
+// if (typeof window !== 'undefined') {
+//   // 👉️ can use document here
+//   console.log('You are on the browser')
+
+//   console.log(document.title)
+//   console.log(document.getElementsByClassName('my-class'));
+// } else {
+//   // 👉️ can't use document here
+//   console.log('You are on the server')
+// }
+const mainEl = document.getElementsByTagName("main")[0];
+// console.log(mainEl);
 //let mainEl = document.getElementsByTagName('main');
 //console.log(mainEl);
 mainEl.style.backgroundColor = "var(--main-bg)";
@@ -30,45 +40,45 @@ menuLinks.forEach(function (i) {
   topMenuEl.appendChild(link);
 });
 
-// var menuLinks = [
-//   { text: "about", href: "/about" },
-//   {
-//     text: "catalog",
-//     href: "#",
-//     subLinks: [
-//       { text: "all", href: "/catalog/all" },
-//       { text: "top selling", href: "/catalog/top" },
-//       { text: "search", href: "/catalog/search" },
-//     ],
-//   },
-//   {
-//     text: "orders",
-//     href: "#",
-//     subLinks: [
-//       { text: "new", href: "/orders/new" },
-//       { text: "pending", href: "/orders/pending" },
-//       { text: "history", href: "/orders/history" },
-//     ],
-//   },
-//   {
-//     text: "account",
-//     href: "#",
-//     subLinks: [
-//       { text: "profile", href: "/account/profile" },
-//       { text: "sign out", href: "/account/signout" },
-//     ],
-//   },
-// ];
+var menuLinks = [
+  { text: "about", href: "/about" },
+  {
+    text: "catalog",
+    href: "#",
+    subLinks: [
+      { text: "all", href: "/catalog/all" },
+      { text: "top selling", href: "/catalog/top" },
+      { text: "search", href: "/catalog/search" },
+    ],
+  },
+  {
+    text: "orders",
+    href: "#",
+    subLinks: [
+      { text: "new", href: "/orders/new" },
+      { text: "pending", href: "/orders/pending" },
+      { text: "history", href: "/orders/history" },
+    ],
+  },
+  {
+    text: "account",
+    href: "#",
+    subLinks: [
+      { text: "profile", href: "/account/profile" },
+      { text: "sign out", href: "/account/signout" },
+    ],
+  },
+];
 
 
-// //Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
-// const subMenuEl = document.getElementById("sub-menu");
-// subMenuEl.style.height = "100%";
-// subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
-// subMenuEl.classList.add("flex-around");
-// console.log(subMenuEl);
-// var topMenuLinks = document.querySelector("topMenuE1");
-// console.log(topMenuLinks);
+//Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
+const subMenuEl = document.getElementById("sub-menu");
+subMenuEl.style.height = "100%";
+subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+subMenuEl.classList.add("flex-around");
+console.log(subMenuEl);
+var topMenuLinks = document.querySelector("topMenuE1");
+//console.log(topMenuLinks);
 
 
 // Menu data structure
@@ -78,4 +88,4 @@ menuLinks.forEach(function (i) {
 //     { text: 'orders', href: '/orders' },
 //     { text: 'account', href: '/account' },
 //   ];
-console.log ("hello")
+//console.log ("hello")
