@@ -4,7 +4,7 @@
 
 /* CSS Custom Properties */
 :root {
-  --main-bg: #4a4e4d;
+  --main-bg: #ffffff;
   /* --top-menu-bg: #0e9aa7; */
  
   --top-menu-bg: rgb(156, 115, 13) ;
@@ -63,6 +63,6 @@ nav a.active {
   color: var(--main-bg);
 }
 #subMenuEl{
-  position: :absolute;
-  top=0;
+  position: absolute;
+  top:0;
 }

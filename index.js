@@ -27,57 +27,70 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 topMenuEl.classList.add("flex-around");
 // Menu data structure
 var menuLinks = [
-  { text: "about", href: "/about" },
-  { text: "catalog", href: "/catalog" },
-  { text: "orders", href: "/orders" },
-  { text: "account", href: "/account" },
+  { text: "HOME", href: "/HOME" },
+  { text: "SERVICES", href: "/SERVICES" },
+  { text: "CONTACT", href: "/CONTACT" },
+  { text: "ABOUT", href: "/ABOUT" },
 ];
-menuLinks.forEach(function (i) {
-  //Create an <a> element.
-  const link = document.createElement("a");
-  link.innerText = i.text;
-  link.href = `${i.href}`;
+
+//HENOCK ARRAY**********//
+// menuLinks.forEach(function (i) {
+//   //Create an <a> element.
+//   const link = document.createElement("a");
+//   link.innerText = i.text;
+//   link.href = `${i.href}`;
+//   topMenuEl.appendChild(link);
+// });
+
+// ****** TEACHER ARRAY*********//
+menuLinks.forEach((el) => {
+  let link = document.createElement('a');
+  link.setAttribute('href', el.href);
+  link.textContent = el.text;
   topMenuEl.appendChild(link);
+
 });
 
-var menuLinks = [
-  { text: "about", href: "/about" },
-  {
-    text: "catalog",
-    href: "#",
-    subLinks: [
-      { text: "all", href: "/catalog/all" },
-      { text: "top selling", href: "/catalog/top" },
-      { text: "search", href: "/catalog/search" },
-    ],
-  },
-  {
-    text: "orders",
-    href: "#",
-    subLinks: [
-      { text: "new", href: "/orders/new" },
-      { text: "pending", href: "/orders/pending" },
-      { text: "history", href: "/orders/history" },
-    ],
-  },
-  {
-    text: "account",
-    href: "#",
-    subLinks: [
-      { text: "profile", href: "/account/profile" },
-      { text: "sign out", href: "/account/signout" },
-    ],
-  },
-];
+
+// var menuLinks = [
+//   { text: "HOME", href: "/HOME" },
+//   {
+//     text: "SERVICES",
+//     href: "#",
+//     subLinks: [
+//       { text: "all", href: "/SERVICES/all" },
+//       { text: "top selling", href: "/SERVICES/top" },
+//       { text: "search", href: "/SERVICES/search" },
+//     ],
+//   },
+//   {
+//     text: "CONTACT",
+//     href: "#",
+//     subLinks: [
+//       { text: "new", href: "/CONTACT/new" },
+//       { text: "pending", href: "/CONTACT/pending" },
+//       { text: "history", href: "/CONTACT/history" },
+//     ],
+//   },
+//   {
+//     text: "ABOUT",
+//     href: "#",
+//     subLinks: [
+//       { text: "profile", href: "/ABOUT/profile" },
+//       { text: "sign out", href: "/ABOUT/signout" },
+//     ],
+//   },
+// ];
 
 
 //Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
-const subMenuEl = document.getElementById("sub-menu");
-subMenuEl.style.height = "100%";
-subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
-subMenuEl.classList.add("flex-around");
-console.log(subMenuEl);
+// const subMenuEl = document.getElementById("sub-menu");
+// subMenuEl.style.height = "100%";
+// subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+// subMenuEl.classList.add("flex-around");
+// console.log(subMenuEl);
 var topMenuLinks = document.querySelector("topMenuE1");
+
 //console.log(topMenuLinks);
 
 
