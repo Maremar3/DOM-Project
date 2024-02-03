@@ -11,8 +11,8 @@ const todoForm = document.getElementById('todo-form');
 
 //const cList = document.getElementById("commentList");
 const cInput = document.getElementById("todo-input");
+//const cBtn = document.getElementById("addCommentBtn");
 const cBtn = document.getElementById("addCommentBtn");
-
 // The function to handle adding new comments.
 function addComment() {
   const newComment = cInput.value;
@@ -27,8 +27,11 @@ function addComment() {
 }
 
 // Register the event listener.
-////cBtn.addEventListener("click", addComment);
-todoForm.addEventListener('submit', addComment) 
+cBtn.addEventListener("click",myfunction);
+function myfunction(){
+  window.alert('Please,you have to enter your task!');
+}
+//todoForm.addEventListener('submit', addComment) 
 
 //We need to handle the event when a user adds a new task. 
 //todoForm.addEventListener('click', function(event) {
