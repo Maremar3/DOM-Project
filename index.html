@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>ALAB DOM Manipulation</title>
-   
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css">
-    <!-- <script src="index.js" defer></script> -->
-  </head>
-
-  <body>
-    <header>
-      <nav id="top-menu"></nav>
-      <!-- Add the <nav> element below -->
-      <nav id="sub-menu"></nav>
-    </header>
-    <main></main>
-
-    <script src="index.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="todo-app">
+        <h1>My To-Do List</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <!-- <button type="submit" >Add Task</button> -->
+            <!-- <button  id="cbutton">Add Task</button> -->
+            <button id="addCommentBtn">Add Comment</button>
+        </form>
+        <ul id="todo-list">
+            <!-- Tasks will be added here -->
+        </ul>
+      </div>
+</body>
 </html>
