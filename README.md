@@ -3,9 +3,10 @@
 You can add in text box your list then add the button add Task
 When you click add text , checkbox and delete button will appear 
 
-*_I used this website to help me to underdtand DOM eventlistener_<br>
+__I used this website to help me to underdtand DOM eventlistener__
+<br>
     https://www.w3schools.com/<br><br>
->I used this language to design my APP
+__I used this language to design my APP__
 * HTML
 * CSS
 * JAvaScript
