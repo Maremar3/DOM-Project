@@ -1,7 +1,7 @@
 ## Data Object Model Manipolation final project
 ### This is small single web application it called  To-Do List
-You can add in text box your list then add the button add Task
-When you click add text , checkbox and delete button will appear 
+You can add text or your list in text box then press the button add Task
+When you click add text button , checkbox and delete button will appear 
 
 __I used this website to help me to underdtand DOM eventlistener__
 <br>
