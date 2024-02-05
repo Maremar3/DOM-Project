@@ -1,3 +1,5 @@
+//Cache at least one element using selectElementById.
+//Cache at least one element using querySelector
 const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.querySelector('#todo-list');
@@ -10,17 +12,21 @@ newTask=todoInput.value;
   addTask(newTask); // Add the new task
 });
 
-// addTask has additional features like checkboxes and delete buttons for each task. 
+// addTask has additional features like checkboxes and delete buttons for each task.
+//Create at least one element using createElement. 
  //Here’s an updated version of the function:
 function addTask(task) {
   const listItem = document.createElement('li');
   const taskText = document.createElement('span');
+  // one element in response to user interaction using textcontent
+  //Use appendChild and/or prepend to add new elements to the DOM.
   taskText.textContent = task;
   listItem.appendChild(taskText);
 
   const checkBox = document.createElement('input');
   checkBox.setAttribute('type', 'checkbox');
-  listItem.appendChild(checkBox);
+   //listItem.appendChild(checkBox);
+   listItem.appendChild(checkBox);
 
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';
@@ -58,6 +64,7 @@ editButton.addEventListener('click', function() {
  // Event listeners for the checkbox task
   checkBox.addEventListener('change', function() {
     if (this.checked) {
+      //Modify the style and/or CSS classes of an element in response to user interactions using the style
         taskText.style.textDecoration = 'line-through';
     } else {
         taskText.style.textDecoration = 'none';
@@ -68,10 +75,10 @@ editButton.addEventListener('click', function() {
 // Event listeners for the delete
 deleteButton.addEventListener('click', function() {
   todoList.removeChild(listItem);
+ //todoList.removeChild(childNodes)
+  //todoList.removeChild(nextSibling)
 });
 }
-
-
 todoForm.addEventListener('submit', function(event) {
   event.preventDefault();
    const newTask = todoInput.value;
@@ -85,9 +92,8 @@ todoForm.addEventListener('submit', function(event) {
 
   todoInput.value = ''; // Clear the input field after adding a task
 });
-
-
-//save tasks to the browser’s local storage so they persist even after the browser is closed.
+//save tasks to the browser’s local storage.
+//Iterate over a task[] collection of elements to accomplish some task.
 function saveTasksToLocalStorage() {
   const tasks = [];
   document.querySelectorAll('#todo-list li').forEach(task => {
