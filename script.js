@@ -1,6 +1,9 @@
 const todoForm = document.getElementById('todo-form');
+//const todoInput = document.getElementById('todo-input');
 const todoInput = document.getElementById('todo-input');
-const todoList = document.getElementById('todo-list');
+//const todoList = document.getElementById('todo-list');
+const todoList = document.querySelector('#todo-list');
+
 
 
 
@@ -8,7 +11,7 @@ todoForm.addEventListener('submit', function(event) {
   // Existing code
 
 newTask=todoInput.value;
- // alert('YOur TASK IS  !    '+todoInput.value);
+ ;
   addTask(newTask); // Add the new task
 });
 
@@ -43,6 +46,37 @@ function addTask(task) {
 
   todoList.appendChild(listItem);
 
+//we will add edit button for each task.
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  listItem.appendChild(editButton);
+
+
+//dd the functionality to edit tasks. This involves toggling between viewing and editing states
+editButton.addEventListener('click', function() {
+  const isEditing = listItem.classList.contains('editing');
+
+  if (isEditing) {
+      // Switch back to view mode
+      taskText.textContent = this.previousSibling.value; // Assuming the input field is right before the edit button
+      listItem.classList.remove('editing');
+      editButton.textContent = 'Edit';
+  } else {
+      // Switch to edit mode
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = taskText.textContent;
+      listItem.insertBefore(input, taskText);
+      listItem.removeChild(taskText);
+      listItem.classList.add('editing');
+      editButton.textContent = 'Save';
+  }
+});
+
+
+
+
+
  // Event listeners for the checkbox task
   checkBox.addEventListener('change', function() {
     if (this.checked) {
@@ -50,12 +84,15 @@ function addTask(task) {
     } else {
         taskText.style.textDecoration = 'none';
     }
-  });
+
+     });
+
 // Event listeners for the delete
 deleteButton.addEventListener('click', function() {
   todoList.removeChild(listItem);
 });
 }
+
 
 
 
@@ -72,9 +109,23 @@ todoForm.addEventListener('submit', function(event) {
 
   todoInput.value = ''; // Clear the input field after adding a task
 });
-let file = "info.txt"
 
-fetch (file)
-.then(x => x.text())
-//.then(y => document.getElementById("demo").innerHTML = y);
-.then(y=todoForm.innerHTML=y)
+
+//save tasks to the browser’s local storage so they persist even after the browser is closed.
+function saveTasksToLocalStorage() {
+  const tasks = [];
+  document.querySelectorAll('#todo-list li').forEach(task => {
+      const taskText = task.querySelector('span').textContent;
+      const isCompleted = task.classList.contains('completed');
+      tasks.push({ text: taskText, completed: isCompleted });
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+//When the page loads, we should retrieve and display the tasks from local storage:
+document.addEventListener('DOMContentLoaded', function() {
+  const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  savedTasks.forEach(task => {
+      addTask(task.text);
+  });
+});
