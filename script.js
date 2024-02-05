@@ -1,11 +1,6 @@
 const todoForm = document.getElementById('todo-form');
-//const todoInput = document.getElementById('todo-input');
 const todoInput = document.getElementById('todo-input');
-//const todoList = document.getElementById('todo-list');
 const todoList = document.querySelector('#todo-list');
-
-
-
 
 todoForm.addEventListener('submit', function(event) {
   // Existing code
@@ -14,19 +9,6 @@ newTask=todoInput.value;
  ;
   addTask(newTask); // Add the new task
 });
-
-
-
-// function addTask(task) {
-//   const listItem = document.createElement('li');
-//   listItem.textContent = task;
-//   alert('YOur TASK IS!'+task);
-//   // Additional functionality to be added here
-
-//   todoList.appendChild(listItem);
-// }
-
-
 
 // addTask has additional features like checkboxes and delete buttons for each task. 
  //Here’s an updated version of the function:
@@ -73,10 +55,6 @@ editButton.addEventListener('click', function() {
   }
 });
 
-
-
-
-
  // Event listeners for the checkbox task
   checkBox.addEventListener('change', function() {
     if (this.checked) {
@@ -92,8 +70,6 @@ deleteButton.addEventListener('click', function() {
   todoList.removeChild(listItem);
 });
 }
-
-
 
 
 todoForm.addEventListener('submit', function(event) {
