@@ -5,9 +5,9 @@ When you click add text , checkbox and delete button will appear
 
 *_I used this website to help me to underdtand DOM eventlistener_<br>
     https://www.w3schools.com/<br><br>
->I used this language to design my APP
+> I used this language to design my APP
 * HTML
 * CSS
 * JAvaScript
-  * I did all the comment to explain an application __steps__
+  * I did all the comment to explain an application* __steps__
   
